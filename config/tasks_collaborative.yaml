@@ -1,0 +1,47 @@
+collaborative_predict_task:
+  description: >
+    You are the Prediction Modeler. Predict the star rating and review text
+    that User "{user_id}" would write for Item "{item_id}".
+
+    == PRE-FETCHED DATA (share with colleagues as context) ==
+
+    USER PROFILE:
+    {user_summary}
+
+    USER REVIEW HISTORY AND CALIBRATION:
+    {history_summary}
+
+    ITEM DETAILS AND PEER REVIEWS:
+    {item_summary}
+
+    == DELEGATION STEPS — execute in order ==
+
+    STEP 1: Delegate to "Yelp User Behavior Analyst".
+      Ask: "Summarise this user's rating tendency (Strict/Balanced/Lenient),
+      writing style, casing, and tone from the profile and review history provided."
+      Include the USER PROFILE and USER REVIEW HISTORY as context.
+
+    STEP 2: Delegate to "Restaurant and Business Intelligence Analyst".
+      Ask: "Summarise this business's category, price range, overall rating,
+      key strengths, and common complaints from the item data provided."
+      Include the ITEM DETAILS AND PEER REVIEWS as context.
+
+    STEP 3: Delegate to "User Rating Calibration Specialist".
+      Ask: "Compute the expected_range and most_likely_rating for this user
+      based on their rating distribution and calibration signals."
+      Include the USER REVIEW HISTORY AND CALIBRATION as context.
+
+    STEP 4 — YOUR FINAL ANSWER. After receiving all three peer responses:
+    Output ONLY this JSON — no markdown, no fences, no explanation:
+    {"stars": <one of 1.0|2.0|3.0|4.0|5.0>, "review": "<review in the user's voice>"}
+
+    FINAL ANSWER RULES:
+    - Stars MUST be inside the expected_range from Step 3.
+    - Review must be 2-4 sentences under 280 characters matching the user's style.
+    - Your Final Answer is ONLY the JSON object — not delegation commands or prose.
+    - If calibration says expected_range is 1.0-2.0, do NOT give 4.0 stars.
+  expected_output: >
+    A plain JSON object with exactly two fields:
+    {"stars": 4.0, "review": "Great spot, friendly service, a bit noisy..."}
+    No markdown, no fences, no extra text — just the JSON object.
+  agent: prediction_modeler

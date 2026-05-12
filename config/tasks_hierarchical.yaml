@@ -1,0 +1,141 @@
+analyze_user_task:
+  description: >
+    Analyse the Yelp user profile and review history provided below.
+    Do NOT call any tools — all data is already provided here.
+
+    USER PROFILE:
+    {user_summary}
+
+    USER REVIEW HISTORY:
+    {history_summary}
+
+    RULES:
+    - Only reference facts that appear in the data above.
+    - Do not invent reviews, venues, ratings, or personal attributes.
+    - If a field says "unavailable" or is missing, say so plainly.
+
+    Write a concise Markdown report covering:
+    1. Average rating tendency — Strict (avg <= 3.0) / Balanced (3.0-4.0) / Lenient (>= 4.0)
+    2. Writing style, tone, casing, and typical vocabulary
+    3. Topics the user cares about most (food quality, service, price, ambience, etc.)
+    4. Elite status and reviewer tenure
+    5. Up to two representative quoted snippets from their review history (if available)
+  expected_output: >
+    A Markdown report (max 200 words) covering rating tendency, writing style,
+    key topics, elite status, and up to 2 quoted snippets from their history.
+  agent: user_profiler
+
+analyze_item_task:
+  description: >
+    Analyse the Yelp business record and peer reviewer opinions provided below.
+    Do NOT call any tools — all data is already provided here.
+
+    ITEM DETAILS AND PEER REVIEWS:
+    {item_summary}
+
+    RULES:
+    - Only reference facts that appear in the data above.
+    - Do not invent dishes, attributes, locations, or categories.
+    - If a field is missing, say so plainly.
+
+    Write a concise Markdown report covering:
+    1. Business name, location, and category tags
+    2. Overall average star rating and review count
+    3. Price range, noise level, attire, and ambience (if present in the data)
+    4. Key strengths and common complaints from other reviewers (if snippets available)
+  expected_output: >
+    A Markdown report (max 150 words) covering the business profile, aggregate
+    rating, notable attributes, and a brief sentiment summary from peer reviews.
+  agent: item_analyst
+
+analyze_item_task_rag:
+  description: >
+    Analyse the Yelp business record and peer reviewer opinions provided below.
+    When the item record is sparse, you MAY call the search_historical_reviews tool
+    once to find what other Yelp reviewers say about similar businesses.
+
+    ITEM DETAILS AND PEER REVIEWS:
+    {item_summary}
+
+    RULES:
+    - Prefer facts from the data above.
+    - If a key field (category, avg_stars, location) is missing or ambiguous, issue
+      ONE tool call: {"search_query": "<business name> <city> <category>"}.
+    - Do not invent dishes, attributes, locations, or categories.
+    - Do not loop on search — one call maximum.
+    - If a field says "unavailable" or is missing and the tool returns nothing, say so plainly.
+
+    Write a concise Markdown report covering:
+    1. Business name, location, and category tags
+    2. Overall average star rating and review count
+    3. Price range, noise level, attire, and ambience (if present in the data or tool results)
+    4. Key strengths and common complaints (from peer snippets or tool results)
+  expected_output: >
+    A Markdown report (max 200 words) covering the business profile, aggregate
+    rating, notable attributes, and a brief sentiment summary from peer reviews
+    or search results. Note if RAG search was used.
+  agent: item_analyst
+
+calibrate_user_task:
+  description: >
+    Calibrate the rating prior for this user using the review history below.
+    Do NOT call any tools — all data is already provided here.
+
+    USER REVIEW HISTORY AND CALIBRATION SIGNALS:
+    {history_summary}
+
+    INSTRUCTIONS:
+    1. Find USER_HISTORICAL_AVERAGE_STARS and USER_RATING_DISTRIBUTION in the data.
+    2. Classify the user: Strict (avg <= 3.0) / Balanced (3.0-4.0) / Lenient (>= 4.0).
+    3. Find PRIOR_STAR_ESTIMATE in the CALIBRATION CONTEXT section.
+    4. From RECENT_REVIEWS, identify up to 2 low-star reviews and up to 2 high-star
+       reviews. Quote up to 20 words from each as evidence.
+    5. Compute:
+       - expected_range: a half-star inclusive range covering where this user most
+         often rates (e.g., 1.0-3.0 for Strict, 3.5-5.0 for Lenient).
+         Skew toward the PRIOR_STAR_ESTIMATE when it diverges from the user average.
+       - most_likely_rating: one best-guess number inside expected_range.
+       - confidence: LOW / MEDIUM / HIGH based on rating distribution consistency.
+    6. Write your report in plain Markdown. No code fences. No tool calls.
+
+    COLD-START RULE: If USER_HISTORICAL_AVERAGE_STARS is unknown, write ONLY:
+    "Calibration unavailable — cold-start; downstream must rely on PRIOR_STAR_ESTIMATE."
+  expected_output: >
+    A plain Markdown calibration report with four sections:
+    ## Calibration Summary
+    ## Evidence — Most Negative
+    ## Evidence — Most Positive
+    ## Rating Prior for the Prediction Modeler (one sentence: expected_range + most_likely_rating)
+  agent: calibrator
+
+predict_review_task:
+  description: >
+    You will receive reports from your colleagues: a user profile analysis and a
+    business evaluation report. Synthesize them to predict the exact star rating
+    and review text this user would write for this business.
+
+    CALIBRATION (extract from the user profile context):
+    - Find USER_HISTORICAL_AVERAGE_STARS and PRIOR_STAR_ESTIMATE in the user report.
+    - Derive expected_range:
+        Strict (avg <= 3.0)  → 1.0-3.0
+        Balanced (3.0-4.0)   → 2.5-4.5, skewed toward PRIOR_STAR_ESTIMATE
+        Lenient  (avg >= 4.0) → 3.5-5.0
+    - Default to PRIOR_STAR_ESTIMATE unless the business evaluation gives strong
+      contrary evidence (e.g., clear negative sentiment in peer reviews).
+    - Do NOT collapse to 3.0 by default; pick the bucket that best fits this item.
+
+    CRITICAL RULES:
+    1. Stars MUST fall inside the expected_range you derived above.
+    2. Write the review in the user's typical vocabulary, tone, casing, and style.
+    3. Stars must be exactly one of: 1.0, 2.0, 3.0, 4.0, or 5.0.
+    4. Review should be 2-4 sentences, under 280 characters.
+    5. Your ENTIRE response must be ONLY a valid JSON object with exactly two fields.
+    6. No text, markdown fences, or explanation outside the JSON.
+
+    Required output format:
+    {"stars": <1.0|2.0|3.0|4.0|5.0>, "review": "<review text>"}
+  expected_output: >
+    A valid JSON object with exactly two fields: "stars" (one of 1.0-5.0) and
+    "review" (a string matching the user's voice). No markdown, no extra text.
+    Example: {"stars": 4.0, "review": "Great food, friendly staff, a bit noisy..."}
+  agent: prediction_modeler

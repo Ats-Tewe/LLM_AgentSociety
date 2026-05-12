@@ -1,0 +1,423 @@
+{
+  "run_timestamp": "20260507_230343",
+  "team_members": [
+    {
+      "name": "Eyu",
+      "student_id": "12345"
+    }
+  ],
+  "mode": "mock",
+  "config": {
+    "threads": 1,
+    "timeout_seconds": 300,
+    "tasks_run": 35
+  },
+  "timing": {
+    "init_seconds": 10.42,
+    "inference_seconds": 25.07,
+    "avg_task_seconds": 0.72,
+    "min_task_seconds": 0.5,
+    "max_task_seconds": 2.5
+  },
+  "errors": 0,
+  "evaluation": {
+    "type": "simulation",
+    "metrics": {
+      "preference_estimation": 0.7485714285714286,
+      "review_generation": 0.7131198392889908,
+      "overall_quality": 0.7308456339302096
+    },
+    "data_info": {
+      "evaluated_count": 35,
+      "original_simulation_count": 35,
+      "original_ground_truth_count": 35
+    }
+  },
+  "per_task_outputs": [
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "_RD91KuqIeEkUQkVNR_j0Q",
+        "item_id": "9c7MUiE6VI8NesjPdj5FkA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "8zsD9N1ti4Skl_DVS4MKRA",
+        "item_id": "LINqYppbDjHbPrjpfHqCaQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "YxyJGC5Q9zt2Ada1wavkRg",
+        "item_id": "C809UuprygJyEgJw4wr2Pg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "qeU_taXeFL_NyBk379sAVw",
+        "item_id": "siPJQeI7zK2EwvwzN8KpUg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "_O07bgm0k4AvHlqf9jDWYw",
+        "item_id": "jEasa4Sbzy4NdLyzPPgQyg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "_YtjV3BMM1it9tRDCZKK1Q",
+        "item_id": "4MY3w1Spq0LFxLKmIkGRWg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "PlkcpVx74F5bcjTznVoTEg",
+        "item_id": "ITOkOiX-hfsazVPpFFQVJA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "1kdXLwdjvuk7FIS3c-oOPA",
+        "item_id": "ReVpjIDupK_VMPn7ZxPvOQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "4I0CNcNYC64DzlP97I6stA",
+        "item_id": "EI2_OgANt1Mb_83cNnpPwg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "P8cwH7A59NgHKFrNjoiojQ",
+        "item_id": "1Ggw9DE7s9h4q9sRo-f3oA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "3GunTcTClJvVTj0Rragv_g",
+        "item_id": "9NV4U93U4nVnJje1DZrxPA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "fGjhnuxU2o3ylyqTD3TVJQ",
+        "item_id": "X5fWO9e82EICHXzzs6eQMg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "OmXFBEYuLpHMClXphGt8kA",
+        "item_id": "uVJkqQ1U9MH7hBorrwGhBg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "ykDbok7TYzgOp3Fx8Y934A",
+        "item_id": "z_7TZeTXsDH6MmkPHQN8nQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "UqbnGiOpb4Jh1KVfhU7_NA",
+        "item_id": "Fu6fvUUeBsQtQLsXbynoBQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "UDQI6MyqcoC5MLF7tS6aow",
+        "item_id": "410SzJMr27T3wUusKW890A"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "4WHitFIWTTmj8gE--7GyoA",
+        "item_id": "arKiXax3ScSM_z3O-0CIyw"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "uB0hadiRiQcyRF7rt4PL-w",
+        "item_id": "qDEcJ48kXdWxQGZefgG94w"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "P-NTOAMFVSDFGkhcj4GaIQ",
+        "item_id": "VO5Jphyqmoa62lbA7-vzpQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "jGs8-yyoQA5b7Gu3liK9Ow",
+        "item_id": "QQGyPctWtd9WOZnMKUChUQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "IML25ULTDCnR_o58BIQWuA",
+        "item_id": "rKx-J2H54p2eZIdn8JvJuA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "5a-3jw_SxqpVjL2C65lslA",
+        "item_id": "EMXZ_zHfbFQi18J88-i3lw"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "52R1k6G03m8ES7N1rXiB1Q",
+        "item_id": "0jQPPEppYjGQ2higy6JvCg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "DK57YibC5ShBmqQl97CKog",
+        "item_id": "BUk5vgBJIJKTj_izP731yw"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "6-1-PoKy0sPtJmmD9n-PQg",
+        "item_id": "-fjIX9bvBKwXjQWfdgiWpQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "L0L09rkV4mb1z_B4-BCvog",
+        "item_id": "elbqy5pmTuhPo6-VZR5g8w"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "59qPUhPO6l498iCuvRy0Ig",
+        "item_id": "-JIeZE7f926mnRNcdnYk6Q"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "EkNSiRS4uXjY-5BBXLQHfw",
+        "item_id": "eqNutOMnPqKa9QDAY6KfEw"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "5YFsXxEu-A4F93nHag0W3A",
+        "item_id": "9kfDDNapNWKF5B41X27HkA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "Ls6_meTWoLZasx4174L0Jg",
+        "item_id": "IkidDP7w2iFsS1a2szkgHQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "Ys3yWYAemsDpXcNTkU6p8g",
+        "item_id": "poviu-6n3iaRE4gdQz6OYw"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "4oWWLIkmXjZc9-NNz3UvUQ",
+        "item_id": "M6qDX8HZS7gOJ_pBOAih1g"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "1lV0zOCOVCVMaiCmdVrLaw",
+        "item_id": "kvzzU6ouwmDEUBs87VAELg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "WfkfXq17v7Zvxo76Tv2ojg",
+        "item_id": "z9ipWqd6asWSn1vwcBvUcg"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "emWdy8DFSjuKam7ygHsPng",
+        "item_id": "LYPvkW2MvEbg-JIr91r1VA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    }
+  ]
+}

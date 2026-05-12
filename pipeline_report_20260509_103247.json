@@ -1,0 +1,68 @@
+{
+  "run_timestamp": "20260509_103247",
+  "mode": "mock",
+  "model": "minimaxai/minimax-m2.7",
+  "config": {
+    "threads": 1,
+    "timeout_seconds": 300,
+    "tasks_run": 3,
+    "tasks_total": 41
+  },
+  "timing": {
+    "init_seconds": 15.31,
+    "inference_seconds": 4.82,
+    "total_seconds": 20.13,
+    "avg_task_seconds": 1.61,
+    "min_task_seconds": 0.54,
+    "max_task_seconds": 3.7
+  },
+  "errors": 0,
+  "evaluation": {
+    "type": "simulation",
+    "metrics": {
+      "preference_estimation": 0.8666666666666667,
+      "review_generation": 0.7951493215926457,
+      "overall_quality": 0.8309079941296562
+    },
+    "data_info": {
+      "evaluated_count": 3,
+      "original_simulation_count": 3,
+      "original_ground_truth_count": 41
+    }
+  },
+  "per_task_outputs": [
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "JTqQ9C9S2Qc8_aHtO1965g",
+        "item_id": "QGYzYUMsQe6k7__LD91E5w"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "mLwKdFW96yof7-6EVgLXhA",
+        "item_id": "fOhnSqmO4XY5vSI8whVKSA"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    },
+    {
+      "task": {
+        "description": "This is a simulation task. \n            You are a simulation agent that simulates a user's rating and review with an item. \n            There is a user with id and an item with id. ",
+        "user_id": "qjfMBIZpQT9DDtw_BWCopQ",
+        "item_id": "Ge00ikbJsoSxuo8AcDCgOQ"
+      },
+      "output": {
+        "stars": 4.0,
+        "review": "[Mocked] Good place, friendly staff!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+analyze_user_task:
+  description: >
+    Analyse the Yelp user profile and review history provided below.
+    Do NOT call any tools — all data is already provided here.
+
+    USER PROFILE:
+    {user_summary}
+
+    USER REVIEW HISTORY:
+    {history_summary}
+
+    RULES:
+    - Only reference facts that appear in the data above.
+    - Do not invent reviews, venues, ratings, or personal attributes.
+    - If a field says "unavailable" or is missing, say so plainly.
+
+    Write a concise Markdown report covering:
+    1. Average rating tendency — Strict (avg <= 3.0) / Balanced (3.0-4.0) / Lenient (>= 4.0)
+    2. Topics the user cares about most (food quality, service, price, ambience, etc.)
+    3. Elite status and reviewer tenure
+    4. Up to two representative quoted snippets from their review history (if available)
+    5. STYLE FINGERPRINT — output these as exact labeled fields so the prediction agent
+       can replicate the user's voice precisely:
+       - TYPICAL_SENTENCE_COUNT: 1-2 / 3-4 / 5+
+       - TYPICAL_LENGTH: short (under 50 words) / medium (50-120 words) / long (over 120 words)
+       - TONE: casual / formal / mixed
+       - USES_EXCLAMATIONS: yes / no
+       - USES_CAPS_EMPHASIS: yes / no
+       - VOCABULARY_LEVEL: simple / moderate / sophisticated
+  expected_output: >
+    A Markdown report (max 250 words) covering rating tendency, key topics, elite
+    status, up to 2 quoted snippets, and a STYLE FINGERPRINT section with the 6
+    labeled fields listed above.
+  agent: user_profiler
+
+analyze_item_task:
+  description: >
+    Analyse the Yelp business record and peer reviewer opinions provided below.
+    Do NOT call any tools — all data is already provided here.
+
+    ITEM DETAILS AND PEER REVIEWS:
+    {item_summary}
+
+    RULES:
+    - Only reference facts that appear in the data above.
+    - Do not invent dishes, attributes, locations, or categories.
+    - If a field is missing, say so plainly.
+
+    Write a concise Markdown report covering:
+    1. Business name, location, and category tags
+    2. Overall average star rating and review count
+    3. Price range, noise level, attire, and ambience (if present in the data)
+    4. Key strengths and common complaints from other reviewers (if snippets available)
+  expected_output: >
+    A Markdown report (max 150 words) covering the business profile, aggregate
+    rating, notable attributes, and a brief sentiment summary from peer reviews.
+  agent: item_analyst
+
+
+predict_review_task_parallel:
+  description: >
+    Synthesize the two analysis reports below to predict the exact star rating and
+    review text this user would write for this business.
+
+    USER PROFILE ANALYSIS (from user_profiler):
+    {user_analysis}
+
+    ITEM ANALYSIS (from item_analyst):
+    {item_analysis}
+
+    CALIBRATION (from user history — extract USER_HISTORICAL_AVERAGE_STARS and PRIOR_STAR_ESTIMATE):
+    {history_summary}
+
+    CRITICAL RULES:
+    1. Stars MUST be exactly one of: 1.0, 2.0, 3.0, 4.0, or 5.0.
+    2. Derive expected_range from USER_HISTORICAL_AVERAGE_STARS:
+         Strict  (avg <= 3.0) → 1.0-3.0   Balanced (3.0-4.0) → 2.5-4.5
+         Lenient (avg >= 4.0) → 3.5-5.0   Default to PRIOR_STAR_ESTIMATE.
+    3. Your ENTIRE response must be ONLY a valid JSON object with exactly two fields.
+    4. No text, markdown fences, or explanation outside the JSON.
+
+    REVIEW STYLE RULES (these directly improve your review_generation score):
+    5. Mirror the user's sentence length and vocabulary from their quoted history snippets.
+       Short punchy history → write short. Long detailed history → write longer.
+    6. Match the user's casing exactly — if they use ALL CAPS words, exclamation marks,
+       or casual abbreviations, replicate that pattern.
+    7. Mention at least ONE concrete detail specific to this business:
+       its category type, price range, a dish type, noise level, or location if available.
+    8. Do NOT write generic filler such as "Great place, friendly staff!" —
+       every sentence must reflect something real about this specific user and business.
+    9. If USER_CATEGORY_SPECIFIC_AVERAGE is present in the context, let it heavily
+       influence your star choice over the overall USER_HISTORICAL_AVERAGE_STARS.
+    10. Match USER_TYPICAL_WORD_COUNT from the user history — write the review
+        at approximately that word count. Short history → short review. Long → long.
+    11. If PEER_AVG_STARS is present, use it as a strong signal for the business
+        quality. If PEER_AVG_STARS >= 4.3, lean toward 4.0 or 5.0. If <= 3.0, lean
+        toward 2.0 or 3.0. If USER_MODAL_STARS is present, prefer it over
+        USER_HISTORICAL_AVERAGE_STARS as the starting point for your star choice.
+
+    Required output format:
+    {"stars": <1.0|2.0|3.0|4.0|5.0>, "review": "<review text>"}
+  expected_output: >
+    A valid JSON object: {"stars": <float>, "review": "<string>"}. No markdown, no extra text.
+  agent: prediction_modeler
+
+analyze_item_task_rag:
+  description: >
+    Analyse the Yelp business record and peer reviewer opinions provided below.
+    When the item record is sparse, you MAY call the search_historical_reviews tool
+    once to find what other Yelp reviewers say about similar businesses.
+
+    ITEM DETAILS AND PEER REVIEWS:
+    {item_summary}
+
+    RULES:
+    - Prefer facts from the data above.
+    - If a key field (category, avg_stars, location) is missing or ambiguous, issue
+      ONE tool call: {"search_query": "<business name> <city> <category>"}.
+    - Do not invent dishes, attributes, locations, or categories.
+    - Do not loop on search — one call maximum.
+    - If a field says "unavailable" or is missing and the tool returns nothing, say so plainly.
+
+    Write a concise Markdown report covering:
+    1. Business name, location, and category tags
+    2. Overall average star rating and review count
+    3. Price range, noise level, attire, and ambience (if present in the data or tool results)
+    4. Key strengths and common complaints (from peer snippets or tool results)
+  expected_output: >
+    A Markdown report (max 200 words) covering the business profile, aggregate
+    rating, notable attributes, and a brief sentiment summary from peer reviews
+    or search results. Note if RAG search was used.
+  agent: item_analyst
+
+predict_review_task:
+  description: >
+    You will receive reports from your colleagues: a user profile analysis and a
+    business evaluation report. Synthesize them to predict the exact star rating
+    and review text this user would write for this business.
+
+    CALIBRATION (extract from the user profile context):
+    - Find USER_HISTORICAL_AVERAGE_STARS and PRIOR_STAR_ESTIMATE in the user report.
+    - Derive expected_range:
+        Strict (avg <= 3.0)  → 1.0-3.0
+        Balanced (3.0-4.0)   → 2.5-4.5, skewed toward PRIOR_STAR_ESTIMATE
+        Lenient  (avg >= 4.0) → 3.5-5.0
+    - Default to PRIOR_STAR_ESTIMATE unless the business evaluation gives strong
+      contrary evidence (e.g., clear negative sentiment in peer reviews).
+    - Do NOT collapse to 3.0 by default; pick the bucket that best fits this item.
+
+    CRITICAL RULES:
+    1. Stars MUST fall inside the expected_range you derived above.
+    2. Stars must be exactly one of: 1.0, 2.0, 3.0, 4.0, or 5.0.
+    3. Your ENTIRE response must be ONLY a valid JSON object with exactly two fields.
+    4. No text, markdown fences, or explanation outside the JSON.
+
+    REVIEW STYLE RULES (these directly improve your review_generation score):
+    5. Mirror the user's sentence length and vocabulary from their quoted history snippets.
+       Short punchy history → write short. Long detailed history → write longer.
+    6. Match the user's casing exactly — if they use ALL CAPS words, exclamation marks,
+       or casual abbreviations, replicate that pattern.
+    7. Mention at least ONE concrete detail specific to this business:
+       its category type, price range, a dish type, noise level, or location if available.
+    8. Do NOT write generic filler such as "Great place, friendly staff!" —
+       every sentence must reflect something real about this specific user and business.
+    9. If USER_CATEGORY_SPECIFIC_AVERAGE is present in the context, let it heavily
+       influence your star choice over the overall USER_HISTORICAL_AVERAGE_STARS.
+    10. Match USER_TYPICAL_WORD_COUNT from the user history — write the review
+        at approximately that word count. Short history → short review. Long → long.
+    11. If PEER_AVG_STARS is present, use it as a strong signal for the business
+        quality. If PEER_AVG_STARS >= 4.3, lean toward 4.0 or 5.0. If <= 3.0, lean
+        toward 2.0 or 3.0. If USER_MODAL_STARS is present, prefer it over
+        USER_HISTORICAL_AVERAGE_STARS as the starting point for your star choice.
+
+    Required output format:
+    {"stars": <1.0|2.0|3.0|4.0|5.0>, "review": "<review text>"}
+  expected_output: >
+    A valid JSON object with exactly two fields: "stars" (one of 1.0-5.0) and
+    "review" (a string matching the user's voice and specific to this business).
+    No markdown, no extra text.
+  agent: prediction_modeler

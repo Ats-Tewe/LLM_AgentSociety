@@ -1,0 +1,835 @@
+2026-04-27 22:39:17,056 - websocietysimulator - INFO - Start initializing Simulator
+INFO:websocietysimulator:Start initializing Simulator
+2026-04-27 22:39:17,056 - websocietysimulator - INFO - Using CacheInteractionTool
+INFO:websocietysimulator:Using CacheInteractionTool
+2026-04-27 22:39:17,056 - websocietysimulator - INFO - Initializing InteractionTool with data directory: dummy_dataset
+INFO:websocietysimulator:Initializing InteractionTool with data directory: dummy_dataset
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+⚙️  模式: Mock LLM (不消耗 Token)
+
+============================================================
+🚀 啟動 AgentSociety CrewAI 整合測試 (End-to-End)
+============================================================
+>>> 載入 Toy Dataset (dummy_dataset)...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 57409.27it/s]
+[1mRobertaForSequenceClassification LOAD REPORT[0m from: cardiffnlp/twitter-roberta-base-emotion
+Key                             | Status     |  | 
+--------------------------------+------------+--+-
+roberta.embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+INFO:sentence_transformers.base.model:Loading SentenceTransformer model from sentence-transformers/paraphrase-MiniLM-L6-v2.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6162.46it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/paraphrase-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-04-27 22:39:25,488 - websocietysimulator - INFO - Simulator initialized
+INFO:websocietysimulator:Simulator initialized
+2026-04-27 22:39:25,491 - websocietysimulator - INFO - Loaded 5 task-groundtruth pairs
+INFO:websocietysimulator:Loaded 5 task-groundtruth pairs
+2026-04-27 22:39:25,492 - websocietysimulator - INFO - Agent class set
+INFO:websocietysimulator:Agent class set
+2026-04-27 22:39:25,492 - websocietysimulator - INFO - Running simulation
+INFO:websocietysimulator:Running simulation
+2026-04-27 22:39:25,492 - websocietysimulator - INFO - Total tasks: 5
+INFO:websocietysimulator:Total tasks: 5
+2026-04-27 22:39:25,492 - websocietysimulator - INFO - Running with 2 threads
+INFO:websocietysimulator:Running with 2 threads
+
+⚙️  開始推論...
+╭─────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Execution ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Starting Flow Execution                                                                                                                                                                         │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                   │
+│  ID: ab5ccec7-e380-4d8a-80dd-b4f8b4c001ed                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Execution ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Starting Flow Execution                                                                                                                                                                         │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                   │
+│  ID: 20629055-b9db-4a21-b8c3-f86185d4ed9f                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  A new version of CrewAI is available!                                                                                                                                                           │
+│                                                                                                                                                                                                  │
+│  Current version: 1.14.1                                                                                                                                                                         │
+│  Latest version:  1.14.3                                                                                                                                                                         │
+│                                                                                                                                                                                                  │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                                │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  A new version of CrewAI is available!                                                                                                                                                           │
+│                                                                                                                                                                                                  │
+│  Current version: 1.14.1                                                                                                                                                                         │
+│  Latest version:  1.14.3                                                                                                                                                                         │
+│                                                                                                                                                                                                  │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                                │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Started ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Flow Started                                                                                                                                                                                    │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                   │
+│  ID: 20629055-b9db-4a21-b8c3-f86185d4ed9f                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Started ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Flow Started                                                                                                                                                                                    │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                   │
+│  ID: ab5ccec7-e380-4d8a-80dd-b4f8b4c001ed                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Flow started with ID: 20629055-b9db-4a21-b8c3-f86185d4ed9f
+INFO:crewai.flow.flow:Flow started with ID: 20629055-b9db-4a21-b8c3-f86185d4ed9f
+Flow started with ID: ab5ccec7-e380-4d8a-80dd-b4f8b4c001ed
+INFO:crewai.flow.flow:Flow started with ID: ab5ccec7-e380-4d8a-80dd-b4f8b4c001ed
+╭───────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: init_request                                                                                                                                                                            │
+│  Status: Running                                                                                                                                                                                 │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────── ✅ Flow Method Completed ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: init_request                                                                                                                                                                            │
+│  Status: Completed                                                                                                                                                                               │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: init_request                                                                                                                                                                            │
+│  Status: Running                                                                                                                                                                                 │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+╭───────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: trigger_crew_inference                                                                                                                                                                  │
+│  Status: Running                                                                                                                                                                                 │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────── ✅ Flow Method Completed ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: init_request                                                                                                                                                                            │
+│  Status: Completed                                                                                                                                                                               │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: trigger_crew_inference                                                                                                                                                                  │
+│  Status: Running                                                                                                                                                                                 │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+
+╭───────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  A new version of CrewAI is available!                                                                                                                                                           │
+│                                                                                                                                                                                                  │
+│  Current version: 1.14.1                                                                                                                                                                         │
+│  Latest version:  1.14.3                                                                                                                                                                         │
+│                                                                                                                                                                                                  │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                                │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────── 🚀 Crew Execution Started ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Crew Execution Started                                                                                                                                                                          │
+│  Name: crew                                                                                                                                                                                      │
+│  ID: 501ce6f2-afc0-4038-b247-604311ffa16d                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Started ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Task Started                                                                                                                                                                                    │
+│  Name: retrieve_data_task                                                                                                                                                                        │
+│  ID: 6f23af10-f5e6-42b1-9c28-20b83a3074d1                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Agent: Data Retrieval Specialist                                                                                                                                                                │
+│                                                                                                                                                                                                  │
+│  Task: Use the tool to retrieve all background data for User ID "nnImk681KaRqUVHlSfZjGQ" and Item ID "-7GjicSH_rM8JeZGCXGcUg". You MUST use the Interaction Tool Wrapper to query data. You      │
+│  MUST pass a valid JSON dictionary as Action Input, following these exact formats:                                                                                                               │
+│  First, query the user profile: Action: Interaction Tool Wrapper Action Input: {{"query_type": "user", "target_id": "nnImk681KaRqUVHlSfZjGQ"}}                                                   │
+│  Then, query the item details: Action: Interaction Tool Wrapper Action Input: {{"query_type": "item", "target_id": "-7GjicSH_rM8JeZGCXGcUg"}}                                                    │
+│  Then, query the user's historical reviews: Action: Interaction Tool Wrapper Action Input: {{"query_type": "review_by_user", "target_id": "nnImk681KaRqUVHlSfZjGQ"}}                             │
+│  query_type must be exactly one of: "user", "item", "review_by_user", "review_by_item". You MUST complete all three tool calls above, then compile all results into a summary.                   │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[92m22:39:26 - LiteLLM:INFO[0m: utils.py:4004 - 
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+╭────────────────────────────────────────────────────────────────────────────────────────── ❌ LLM Error ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  LLM Call Failed                                                                                                                                                                                 │
+│  Error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response -                                          │
+│  <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef02f0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>                                             │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Failure ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Task Failed                                                                                                                                                                                     │
+│  Name: retrieve_data_task                                                                                                                                                                        │
+│  Agent: Data Retrieval Specialist                                                                                                                                                                │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────────────────────────────────────────────────────────────────── Crew Failure ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Crew Execution Failed                                                                                                                                                                           │
+│  Name: crew                                                                                                                                                                                      │
+│  ID: 501ce6f2-afc0-4038-b247-604311ffa16d                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── Tracing Status ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Info: Tracing is disabled.                                                                                                                                                                      │
+│                                                                                                                                                                                                  │
+│  To enable tracing, do any one of these:                                                                                                                                                         │
+│  • Set tracing=True in your Crew/Flow code                                                                                                                                                       │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                                                                                                   │
+│  • Run: crewai traces enable                                                                                                                                                                     │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ERROR:crewai.flow.flow:Error executing listener trigger_crew_inference: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef02f0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭───────────────────────────────────────────────────────────────────────────────────── ❌ Flow Method Failed ──────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: trigger_crew_inference                                                                                                                                                                  │
+│  Status: Failed                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+2026-04-27 22:39:26,570 - websocietysimulator - ERROR - Task 0 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef02f0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+ERROR:websocietysimulator:Task 0 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef02f0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭─────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Execution ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Starting Flow Execution                                                                                                                                                                         │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                   │
+│  ID: 836d9f7c-c2a4-40a3-a9df-49d803ca4214                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  A new version of CrewAI is available!                                                                                                                                                           │
+│                                                                                                                                                                                                  │
+│  Current version: 1.14.1                                                                                                                                                                         │
+│  Latest version:  1.14.3                                                                                                                                                                         │
+│                                                                                                                                                                                                  │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                                │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Started ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Flow Started                                                                                                                                                                                    │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                   │
+│  ID: 836d9f7c-c2a4-40a3-a9df-49d803ca4214                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Flow started with ID: 836d9f7c-c2a4-40a3-a9df-49d803ca4214
+INFO:crewai.flow.flow:Flow started with ID: 836d9f7c-c2a4-40a3-a9df-49d803ca4214
+╭───────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: init_request                                                                                                                                                                            │
+│  Status: Running                                                                                                                                                                                 │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: trigger_crew_inference                                                                                                                                                                  │
+│  Status: Running                                                                                                                                                                                 │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────── ✅ Flow Method Completed ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Method: init_request                                                                                                                                                                            │
+│  Status: Completed                                                                                                                                                                               │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+╭───────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  A new version of CrewAI is available!                                                                                                                                                           │
+│                                                                                                                                                                                                  │
+│  Current version: 1.14.1                                                                                                                                                                         │
+│  Latest version:  1.14.3                                                                                                                                                                         │
+│                                                                                                                                                                                                  │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                                │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────── 🚀 Crew Execution Started ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                  │
+│  Crew Execution Started                                                                                                                                                                          │
+│  Name: crew                                                                                                                                                                                      │
+│  ID: 6c9aec62-21f9-41a5-83b4-d6e221821b50                                                                                                                                                        │
+│                                                                                                                                                                                                  │
+│                                                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Started                                                                                                                                                                                   │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  ID: 744992be-420f-42a1-8566-ede85f7d4463                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[92m22:39:26 - LiteLLM:INFO[0m: utils.py:4004 - 
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+╭─────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│  Task: Use the tool to retrieve all background data for User ID "-kLVfaJytOJY2-QdQoCcNQ" and Item ID "p9tB3Fiszn1HMLUE-97K4g". You MUST use the Interaction Tool Wrapper to query data. You     │
+│  MUST pass a valid JSON dictionary as Action Input, following these exact formats:                                                                                                              │
+│  First, query the user profile: Action: Interaction Tool Wrapper Action Input: {{"query_type": "user", "target_id": "-kLVfaJytOJY2-QdQoCcNQ"}}                                                  │
+│  Then, query the item details: Action: Interaction Tool Wrapper Action Input: {{"query_type": "item", "target_id": "p9tB3Fiszn1HMLUE-97K4g"}}                                                   │
+│  Then, query the user's historical reviews: Action: Interaction Tool Wrapper Action Input: {{"query_type": "review_by_user", "target_id": "-kLVfaJytOJY2-QdQoCcNQ"}}                            │
+│  query_type must be exactly one of: "user", "item", "review_by_user", "review_by_item". You MUST complete all three tool calls above, then compile all results into a summary.                  │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+INFO:LiteLLM:
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Failure ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Failed                                                                                                                                                                                    │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── ❌ LLM Error ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  LLM Call Failed                                                                                                                                                                                │
+│  Error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response -                                         │
+│  <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef1be0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>                                            │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── Crew Failure ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Crew Execution Failed                                                                                                                                                                          │
+│  Name: crew                                                                                                                                                                                     │
+│  ID: 6c9aec62-21f9-41a5-83b4-d6e221821b50                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── Tracing Status ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Info: Tracing is disabled.                                                                                                                                                                     │
+│                                                                                                                                                                                                 │
+│  To enable tracing, do any one of these:                                                                                                                                                        │
+│  • Set tracing=True in your Crew/Flow code                                                                                                                                                      │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                                                                                                  │
+│  • Run: crewai traces enable                                                                                                                                                                    │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ERROR:crewai.flow.flow:Error executing listener trigger_crew_inference: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef1be0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭───────────────────────────────────────────────────────────────────────────────────── ❌ Flow Method Failed ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: trigger_crew_inference                                                                                                                                                                 │
+│  Status: Failed                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+2026-04-27 22:39:26,638 - websocietysimulator - ERROR - Task 2 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef1be0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+ERROR:websocietysimulator:Task 2 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef1be0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭─────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Execution ───────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Starting Flow Execution                                                                                                                                                                        │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                  │
+│  ID: e19c570d-2bb2-4a83-b879-ccebc79b8f56                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  A new version of CrewAI is available!                                                                                                                                                          │
+│                                                                                                                                                                                                 │
+│  Current version: 1.14.1                                                                                                                                                                        │
+│  Latest version:  1.14.3                                                                                                                                                                        │
+│                                                                                                                                                                                                 │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                               │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Flow Started                                                                                                                                                                                   │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                  │
+│  ID: e19c570d-2bb2-4a83-b879-ccebc79b8f56                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Flow started with ID: e19c570d-2bb2-4a83-b879-ccebc79b8f56
+INFO:crewai.flow.flow:Flow started with ID: e19c570d-2bb2-4a83-b879-ccebc79b8f56
+╭──────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: init_request                                                                                                                                                                           │
+│  Status: Running                                                                                                                                                                                │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────── ✅ Flow Method Completed ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: init_request                                                                                                                                                                           │
+│  Status: Completed                                                                                                                                                                              │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: trigger_crew_inference                                                                                                                                                                 │
+│  Status: Running                                                                                                                                                                                │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  A new version of CrewAI is available!                                                                                                                                                          │
+│                                                                                                                                                                                                 │
+│  Current version: 1.14.1                                                                                                                                                                        │
+│  Latest version:  1.14.3                                                                                                                                                                        │
+│                                                                                                                                                                                                 │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                               │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────── 🚀 Crew Execution Started ───────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Crew Execution Started                                                                                                                                                                         │
+│  Name: crew                                                                                                                                                                                     │
+│  ID: f078fafe-4e72-4be2-864f-00abea2b5d62                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Started                                                                                                                                                                                   │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  ID: 9056a1f5-725c-4407-88a7-6e51e271b704                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│  Task: Use the tool to retrieve all background data for User ID "6ObFF8-uKnOAlXuSH4TlyQ" and Item ID "RhuYqAT45uIR2NNdDsolXQ". You MUST use the Interaction Tool Wrapper to query data. You     │
+│  MUST pass a valid JSON dictionary as Action Input, following these exact formats:                                                                                                              │
+│  First, query the user profile: Action: Interaction Tool Wrapper Action Input: {{"query_type": "user", "target_id": "6ObFF8-uKnOAlXuSH4TlyQ"}}                                                  │
+│  Then, query the item details: Action: Interaction Tool Wrapper Action Input: {{"query_type": "item", "target_id": "RhuYqAT45uIR2NNdDsolXQ"}}                                                   │
+│  Then, query the user's historical reviews: Action: Interaction Tool Wrapper Action Input: {{"query_type": "review_by_user", "target_id": "6ObFF8-uKnOAlXuSH4TlyQ"}}                            │
+│  query_type must be exactly one of: "user", "item", "review_by_user", "review_by_item". You MUST complete all three tool calls above, then compile all results into a summary.                  │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[92m22:39:26 - LiteLLM:INFO[0m: utils.py:4004 - 
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+ERROR:crewai.flow.flow:Error executing listener trigger_crew_inference: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef2900>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭───────────────────────────────────────────────────────────────────────────────────────── ❌ LLM Error ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  LLM Call Failed                                                                                                                                                                                │
+│  Error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response -                                         │
+│  <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef2900>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>                                            │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── Crew Failure ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Crew Execution Failed                                                                                                                                                                          │
+│  Name: crew                                                                                                                                                                                     │
+│  ID: f078fafe-4e72-4be2-864f-00abea2b5d62                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────── ❌ Flow Method Failed ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: trigger_crew_inference                                                                                                                                                                 │
+│  Status: Failed                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Failure ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Failed                                                                                                                                                                                    │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+
+╭──────────────────────────────────────────────────────────────────────────────────────── Tracing Status ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Info: Tracing is disabled.                                                                                                                                                                     │
+│                                                                                                                                                                                                 │
+│  To enable tracing, do any one of these:                                                                                                                                                        │
+│  • Set tracing=True in your Crew/Flow code                                                                                                                                                      │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                                                                                                  │
+│  • Run: crewai traces enable                                                                                                                                                                    │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+2026-04-27 22:39:26,674 - websocietysimulator - ERROR - Task 3 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef2900>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+ERROR:websocietysimulator:Task 3 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef2900>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭─────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Execution ───────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Starting Flow Execution                                                                                                                                                                        │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                  │
+│  ID: 6fc178a5-a0f1-4438-b4e5-1668517cbece                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  A new version of CrewAI is available!                                                                                                                                                          │
+│                                                                                                                                                                                                 │
+│  Current version: 1.14.1                                                                                                                                                                        │
+│  Latest version:  1.14.3                                                                                                                                                                        │
+│                                                                                                                                                                                                 │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                               │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 🌊 Flow Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Flow Started                                                                                                                                                                                   │
+│  Name: AgentSocietyServingFlow                                                                                                                                                                  │
+│  ID: 6fc178a5-a0f1-4438-b4e5-1668517cbece                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Flow started with ID: 6fc178a5-a0f1-4438-b4e5-1668517cbece
+INFO:crewai.flow.flow:Flow started with ID: 6fc178a5-a0f1-4438-b4e5-1668517cbece
+╭──────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: init_request                                                                                                                                                                           │
+│  Status: Running                                                                                                                                                                                │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────── ✅ Flow Method Completed ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: init_request                                                                                                                                                                           │
+│  Status: Completed                                                                                                                                                                              │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────── 🔄 Flow Method Running ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: trigger_crew_inference                                                                                                                                                                 │
+│  Status: Running                                                                                                                                                                                │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  A new version of CrewAI is available!                                                                                                                                                          │
+│                                                                                                                                                                                                 │
+│  Current version: 1.14.1                                                                                                                                                                        │
+│  Latest version:  1.14.3                                                                                                                                                                        │
+│                                                                                                                                                                                                 │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                               │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────── 🚀 Crew Execution Started ───────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Crew Execution Started                                                                                                                                                                         │
+│  Name: crew                                                                                                                                                                                     │
+│  ID: bb09f179-de64-46ed-96fd-450fb54fb135                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Started                                                                                                                                                                                   │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  ID: 43b57747-8c34-4f0b-b63f-13e71c811941                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│  Task: Use the tool to retrieve all background data for User ID "FlXBpK_YZxLo27jcMdII1w" and Item ID "1UNorskttXSWuEcgzKzXcA". You MUST use the Interaction Tool Wrapper to query data. You     │
+│  MUST pass a valid JSON dictionary as Action Input, following these exact formats:                                                                                                              │
+│  First, query the user profile: Action: Interaction Tool Wrapper Action Input: {{"query_type": "user", "target_id": "FlXBpK_YZxLo27jcMdII1w"}}                                                  │
+│  Then, query the item details: Action: Interaction Tool Wrapper Action Input: {{"query_type": "item", "target_id": "1UNorskttXSWuEcgzKzXcA"}}                                                   │
+│  Then, query the user's historical reviews: Action: Interaction Tool Wrapper Action Input: {{"query_type": "review_by_user", "target_id": "FlXBpK_YZxLo27jcMdII1w"}}                            │
+│  query_type must be exactly one of: "user", "item", "review_by_user", "review_by_item". You MUST complete all three tool calls above, then compile all results into a summary.                  │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+[92m22:39:26 - LiteLLM:INFO[0m: utils.py:4004 - 
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+
+INFO:LiteLLM:
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Failure ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Failed                                                                                                                                                                                    │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── ❌ LLM Error ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  LLM Call Failed                                                                                                                                                                                │
+│  Error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response -                                         │
+│  <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef34d0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>                                            │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── Crew Failure ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Crew Execution Failed                                                                                                                                                                          │
+│  Name: crew                                                                                                                                                                                     │
+│  ID: bb09f179-de64-46ed-96fd-450fb54fb135                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── Tracing Status ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Info: Tracing is disabled.                                                                                                                                                                     │
+│                                                                                                                                                                                                 │
+│  To enable tracing, do any one of these:                                                                                                                                                        │
+│  • Set tracing=True in your Crew/Flow code                                                                                                                                                      │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                                                                                                  │
+│  • Run: crewai traces enable                                                                                                                                                                    │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ERROR:crewai.flow.flow:Error executing listener trigger_crew_inference: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef34d0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭───────────────────────────────────────────────────────────────────────────────────── ❌ Flow Method Failed ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: trigger_crew_inference                                                                                                                                                                 │
+│  Status: Failed                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+2026-04-27 22:39:26,706 - websocietysimulator - ERROR - Task 4 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef34d0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+ERROR:websocietysimulator:Task 4 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef34d0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭──────────────────────────────────────────────────────────────────────────────────── ✨ Update Available ✨ ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  A new version of CrewAI is available!                                                                                                                                                          │
+│                                                                                                                                                                                                 │
+│  Current version: 1.14.1                                                                                                                                                                        │
+│  Latest version:  1.14.3                                                                                                                                                                        │
+│                                                                                                                                                                                                 │
+│  To update, run: uv sync --upgrade-package crewai                                                                                                                                               │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────── 🚀 Crew Execution Started ───────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Crew Execution Started                                                                                                                                                                         │
+│  Name: crew                                                                                                                                                                                     │
+│  ID: 86ca9f8a-214b-4b25-aef0-62d57ef265c2                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Started                                                                                                                                                                                   │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  ID: f9d51348-fddc-414e-967d-a926c8d0c41a                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[92m22:39:26 - LiteLLM:INFO[0m: utils.py:4004 - 
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= minimaxai/minimax-m2.7; provider = openai
+╭─────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│  Task: Use the tool to retrieve all background data for User ID "hQjN1FuYaB4pQACZwfrclw" and Item ID "9gObo5ltOMo6UgsaXaHPWA". You MUST use the Interaction Tool Wrapper to query data. You     │
+│  MUST pass a valid JSON dictionary as Action Input, following these exact formats:                                                                                                              │
+│  First, query the user profile: Action: Interaction Tool Wrapper Action Input: {{"query_type": "user", "target_id": "hQjN1FuYaB4pQACZwfrclw"}}                                                  │
+│  Then, query the item details: Action: Interaction Tool Wrapper Action Input: {{"query_type": "item", "target_id": "9gObo5ltOMo6UgsaXaHPWA"}}                                                   │
+│  Then, query the user's historical reviews: Action: Interaction Tool Wrapper Action Input: {{"query_type": "review_by_user", "target_id": "hQjN1FuYaB4pQACZwfrclw"}}                            │
+│  query_type must be exactly one of: "user", "item", "review_by_user", "review_by_item". You MUST complete all three tool calls above, then compile all results into a summary.                  │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── ❌ LLM Error ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  LLM Call Failed                                                                                                                                                                                │
+│  Error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response -                                         │
+│  <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef3cb0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>                                            │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── 📋 Task Failure ────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Task Failed                                                                                                                                                                                    │
+│  Name: retrieve_data_task                                                                                                                                                                       │
+│  Agent: Data Retrieval Specialist                                                                                                                                                               │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────────────────────────────── Crew Failure ──────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Crew Execution Failed                                                                                                                                                                          │
+│  Name: crew                                                                                                                                                                                     │
+│  ID: 86ca9f8a-214b-4b25-aef0-62d57ef265c2                                                                                                                                                       │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────── Tracing Status ─────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Info: Tracing is disabled.                                                                                                                                                                     │
+│                                                                                                                                                                                                 │
+│  To enable tracing, do any one of these:                                                                                                                                                        │
+│  • Set tracing=True in your Crew/Flow code                                                                                                                                                      │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                                                                                                  │
+│  • Run: crewai traces enable                                                                                                                                                                    │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ERROR:crewai.flow.flow:Error executing listener trigger_crew_inference: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef3cb0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+╭───────────────────────────────────────────────────────────────────────────────────── ❌ Flow Method Failed ─────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                 │
+│  Method: trigger_crew_inference                                                                                                                                                                 │
+│  Status: Failed                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+│                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+2026-04-27 22:39:26,794 - websocietysimulator - ERROR - Task 1 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef3cb0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+ERROR:websocietysimulator:Task 1 failed with error: litellm.InternalServerError: InternalServerError: OpenAIException - error - 'FakeResponse' object has no attribute 'parse', Received response - <__main__.fake_completion.<locals>.FakeResponse object at 0x635ef3cb0>, Type of response - <class '__main__.fake_completion.<locals>.FakeResponse'>
+2026-04-27 22:39:26,794 - websocietysimulator - INFO - Simulation finished
+INFO:websocietysimulator:Simulation finished
+2026-04-27 22:39:26,794 - websocietysimulator - INFO - Evaluating simulation results
+INFO:websocietysimulator:Evaluating simulation results
+
+🏆 引擎運算完畢，最終產出:
+------------------------------------------------------------
+[
+  null,
+  null,
+  null,
+  null,
+  null
+]
+------------------------------------------------------------
+
+📊 呼叫官方評分系統 (simulator.evaluate())...
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.95it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.93it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 48.73it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 57.31it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 55.00it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 56.25it/s]
+2026-04-27 22:39:28,105 - websocietysimulator - INFO - Evaluation finished
+INFO:websocietysimulator:Evaluation finished
+💡 競賽衡量結果:
+{
+  "type": "simulation",
+  "metrics": {
+    "preference_estimation": 0.28,
+    "review_generation": 0.5836090923008881,
+    "overall_quality": 0.43180454615044406
+  },
+  "data_info": {
+    "evaluated_count": 5,
+    "original_simulation_count": 5,
+    "original_ground_truth_count": 5
+  }
+}
+
+✅ 整合測試完成！
