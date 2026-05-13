@@ -1,31 +1,31 @@
 {
-  "run_timestamp": "20260509_192302",
+  "run_timestamp": "20260512_215321",
   "team_members": [
     {
-      "name": "ghgs",
-      "student_id": "67678"
+      "name": "Atsbaha Teweldemedhn Hagos",
+      "student_id": "611421412"
     }
   ],
-  "mode": "mock",
+  "mode": "real_llm",
   "config": {
     "threads": 1,
     "timeout_seconds": 300,
     "tasks_run": 35
   },
   "timing": {
-    "init_seconds": 9.02,
-    "inference_seconds": 17.52,
-    "avg_task_seconds": 0.5,
-    "min_task_seconds": 0.3,
-    "max_task_seconds": 1.2
+    "init_seconds": 10.7,
+    "inference_seconds": 3622.17,
+    "avg_task_seconds": 103.49,
+    "min_task_seconds": 57.05,
+    "max_task_seconds": 199.9
   },
   "errors": 0,
   "evaluation": {
     "type": "simulation",
     "metrics": {
-      "preference_estimation": 0.7485714285714286,
-      "review_generation": 0.7131198392889908,
-      "overall_quality": 0.7308456339302096
+      "preference_estimation": 0.76,
+      "review_generation": 0.7411722727183885,
+      "overall_quality": 0.7505861363591942
     },
     "data_info": {
       "evaluated_count": 35,
@@ -41,8 +41,8 @@
         "item_id": "9c7MUiE6VI8NesjPdj5FkA"
       },
       "output": {
-        "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "stars": 3.0,
+        "review": "The staff was friendly and the appetizer was really good, but I found a hair in my salad and there was no apology from the waiter. The main dish was mediocre and I didn't finish it."
       }
     },
     {
@@ -53,7 +53,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Spectacular venue! The service was excellent and the space is beautiful. The food was better than expected for a banquet hall."
       }
     },
     {
@@ -64,7 +64,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Decent pizza delivery. Arrived warm and the order was correct. Nothing special, but gets the job done when you need a quick meal."
       }
     },
     {
@@ -74,8 +74,8 @@
         "item_id": "siPJQeI7zK2EwvwzN8KpUg"
       },
       "output": {
-        "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "stars": 2.0,
+        "review": "Tried the burger here. The driest I've ever had. Barely managed half of it. Fries were good though. Very disappointing meal overall."
       }
     },
     {
@@ -85,8 +85,8 @@
         "item_id": "jEasa4Sbzy4NdLyzPPgQyg"
       },
       "output": {
-        "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "stars": 5.0,
+        "review": "The charming atmosphere and beautiful ambiance make this a must-visit spot. The exquisite food and delightful flavors create an unforgettable experience. Highly recommend for a special night out!"
       }
     },
     {
@@ -97,7 +97,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice place, had a good time overall. Service was decent and the atmosphere was pleasant. Would come back again."
       }
     },
     {
@@ -108,7 +108,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Solid venue overall. Great sightlines from most seats and the club boxes are a nice touch. A bit dated compared to newer spots, but worth visiting for concerts and hockey."
       }
     },
     {
@@ -119,7 +119,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Roux nails the New Orleans vibe with solid Creole food and a cool atmosphere. Great spot for brunch or a relaxed evening out."
       }
     },
     {
@@ -130,7 +130,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Casual spot with solid pizza and attentive service. The vibe is straightforward South Philly—gruff but genuine. Food was satisfying without being fancy. Worth a return visit."
       }
     },
     {
@@ -141,7 +141,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "solid dive with cheap drinks and a solid beer selection. dark lighting, smoking allowed, and the jukebox makes the night. a long-time favorite for good reason."
       }
     },
     {
@@ -152,7 +152,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice spot overall. Had a decent experience with good service. Would probably come back again."
       }
     },
     {
@@ -163,7 +163,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Got a facial here and it lived up to the hype. The staff was professional and the results were solid. Worth trying if you're looking for a quality treatment."
       }
     },
     {
@@ -174,7 +174,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice place overall. Good experience, would recommend to friends."
       }
     },
     {
@@ -185,7 +185,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Ella's has a cool, artsy vibe with great atmosphere. The soul food is solid and portions are generous. Creative cocktails too. Parking can be tricky, but worth the visit."
       }
     },
     {
@@ -196,7 +196,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice place with good food and friendly service. The atmosphere was comfortable and the portions were reasonable. Would visit again."
       }
     },
     {
@@ -206,8 +206,8 @@
         "item_id": "410SzJMr27T3wUusKW890A"
       },
       "output": {
-        "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "stars": 2.0,
+        "review": "Had high hopes based on the hype but left disappointed. The stylist clearly had an off day, and it showed in the results. Wouldn't rush back."
       }
     },
     {
@@ -218,7 +218,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Had a great experience here. The food was tasty, service was friendly, and the atmosphere felt welcoming. Would definitely come back!"
       }
     },
     {
@@ -229,7 +229,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Had a decent experience overall. Service was fine and I'd consider coming back for another visit."
       }
     },
     {
@@ -239,8 +239,8 @@
         "item_id": "VO5Jphyqmoa62lbA7-vzpQ"
       },
       "output": {
-        "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "stars": 5.0,
+        "review": "Yep, I'm a fan! Great Sonoran Hot Dogs and Sammy Dogs. Love the beef burritos. Nice selection of soda including Mexican Coke with real sugar. Perfect for my daughter too!"
       }
     },
     {
@@ -251,7 +251,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Solid spot with good food and reliable service. Worth a visit if you're in the area."
       }
     },
     {
@@ -262,7 +262,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "M Bird Rooftop Tapas Bar offers an elegant experience with stunning views of the Hillsborough River and downtown skyline. Great addition to Armature Works."
       }
     },
     {
@@ -273,7 +273,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Great experience"
       }
     },
     {
@@ -284,7 +284,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Buttery, hand-made Amish-style pretzels that hit the spot when fresh. A tasty handheld snack worth seeking out."
       }
     },
     {
@@ -295,7 +295,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice place with good food and decent service. Enjoyed the experience overall. Would consider coming back."
       }
     },
     {
@@ -306,7 +306,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Decent experience overall. Service was friendly and the food came out in a reasonable time. Would visit again."
       }
     },
     {
@@ -317,7 +317,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Really enjoyed this place! The food was spot-on and portions are super generous. Staff made us feel welcome. Definitely coming back!"
       }
     },
     {
@@ -328,7 +328,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Stopped by and had a pleasant experience overall. The service was good and the atmosphere was welcoming. Would consider coming back."
       }
     },
     {
@@ -339,7 +339,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice place. The food was good and service was friendly. Would recommend."
       }
     },
     {
@@ -349,8 +349,8 @@
         "item_id": "9kfDDNapNWKF5B41X27HkA"
       },
       "output": {
-        "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "stars": 3.0,
+        "review": "This store is crowded, the lines are always crazy, and the customer service is sub-par. Not a fun shopping experience, even if you can find good deals on electronics."
       }
     },
     {
@@ -361,7 +361,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Decent spot overall. Food was good but not exceptional, and the service was fine. Worth a visit if you're in the area, though there are probably better options nearby."
       }
     },
     {
@@ -372,7 +372,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Fresh oysters, big windows, and generous portions. The $26 lobster roll is pricey but worth it for quality seafood."
       }
     },
     {
@@ -383,7 +383,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Enjoyed my meal here. The French-inspired menu offers quality dishes with generous portions and attentive service. Great value for the price."
       }
     },
     {
@@ -394,7 +394,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice spot overall. Good experience, would probably come back."
       }
     },
     {
@@ -405,7 +405,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Nice place. The food was good and service was friendly. Would recommend to others looking for a solid dining experience."
       }
     },
     {
@@ -416,7 +416,7 @@
       },
       "output": {
         "stars": 4.0,
-        "review": "[Mocked] Good place, friendly staff!"
+        "review": "Had a good experience overall. The service was friendly and the atmosphere was pleasant. Would consider coming back to try more items on the menu."
       }
     }
   ]
