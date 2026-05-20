@@ -52,7 +52,7 @@ INSTRUCTOR_EMAIL = "yc.ho@gms.ndhu.edu.tw"
 # Google Drive sharing URL for the test set zip.
 # Paste the "Anyone with the link" share URL here.
 # Leave empty ("") to disable auto-download and use --test-set instead.
-GDRIVE_URL = "https://drive.google.com/file/d/110h8DGAm1IEoAGl6Oqqg7fZMN4HM0dUv/view?usp=sharing"
+GDRIVE_URL = "https://drive.google.com/file/d/1x6GHhPPqGdppR0kFc3c4qicN9zFH1bHM/view?usp=sharing"
 
 # ======================================================================
 # CLI
