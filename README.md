@@ -3,7 +3,7 @@
 > **Assignment 2 — Final Project** LLM Course (Second Semester 2026)
 >
 > **Student:** Atsbaha Teweldemedhn Hagos |
-> **Track:** User Behavior Simulation | **Framework:** OpenEvolve + CrewAI + NVIDIA NIM
+> **Track:** User Behavior Simulation | **Framework:** OpenEvolve + CrewAI + Circular LLM 
 
 ---
 
