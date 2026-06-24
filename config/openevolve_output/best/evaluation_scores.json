@@ -1,0 +1,8 @@
+{
+  "yaml_file": "agents_evolving.yaml",
+  "num_tasks": 1,
+  "preference_estimation": 1.0,
+  "review_generation": 0.9073029271115549,
+  "combined_score": 0.9536514635557775,
+  "evaluated_at": "2026-06-23 10:38:54"
+}

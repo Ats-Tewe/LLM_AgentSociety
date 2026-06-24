@@ -1,0 +1,108 @@
+# OpenEvolve configuration for AgentSociety CrewAI agent + task prompt evolution
+# Initial program : config/agents_evolving.yaml
+# Evaluator       : openevolve_evaluator.py
+
+# -- General ------------------------------------------------------------------
+max_iterations: 50
+checkpoint_interval: 5
+log_level: "INFO"
+random_seed: 42
+
+# -- Evolution strategy -------------------------------------------------------
+diff_based_evolution: false
+language: "text"
+max_code_length: 12000
+
+# -- LLM (OpenEvolve mutation engine) -----------------------------------------
+# Circular fallback: NVIDIA -> Groq account 1 -> Groq account 2 -> NVIDIA ...
+# Each model gets 3 attempts (retries: 2 = 1 original + 2 retries = 3 total).
+# The circular patch in openevolve_evaluator.py tries them in order on failure.
+# api_key uses ${VAR} syntax resolved from environment variables at startup.
+llm:
+  models:
+    - name: "minimaxai/minimax-m2.7"
+      api_base: "https://integrate.api.nvidia.com/v1"
+      api_key: "${OPENAI_API_KEY}"
+      timeout: 120
+      retries: 2
+      retry_delay: 10
+      weight: 1.0
+
+    - name: "llama-3.3-70b-versatile"
+      api_base: "https://api.groq.com/openai/v1"
+      api_key: "${GROQ_API_KEY}"
+      timeout: 60
+      retries: 2
+      retry_delay: 5
+      weight: 1.0
+
+    - name: "llama-3.3-70b-versatile"
+      api_base: "https://api.groq.com/openai/v1"
+      api_key: "${GROQ_API_KEY_2}"
+      timeout: 60
+      retries: 2
+      retry_delay: 5
+      weight: 1.0
+
+  temperature: 0.9
+  max_tokens: 4096
+
+# -- Prompt -------------------------------------------------------------------
+prompt:
+  system_message: |
+    You are an expert prompt engineer for multi-agent Yelp review simulation.
+    You evolve four CrewAI agents AND their task descriptions to maximize
+    combined_score = (preference_estimation + review_generation) / 2.
+
+    NOVELTY: This system evolves BOTH agent prompts AND task descriptions
+    together. The 'tasks:' section is also part of the EVOLVE-BLOCK.
+
+    THE #1 BOTTLENECK IS preference_estimation (star rating accuracy).
+    The failure mode: prediction_modeler ignores PRIOR_STAR_ESTIMATE and
+    outputs 4.0 or 5.0 stars regardless of user history.
+
+    PROVEN WINNING STRATEGIES:
+    1. prediction_modeler MUST apply formula:
+       base = 0.6*USER_HISTORICAL_AVERAGE_STARS + 0.3*PRIOR_STAR_ESTIMATE + 0.1*USER_MODAL_STARS
+       You may evolve the coefficient weights to discover better combinations.
+    2. rating_critic MUST validate: if |predicted - PRIOR| > 0.75 apply correction.
+       You may evolve the deviation threshold and correction weights.
+    3. Lower temperature on prediction agents (0.1-0.3) = more consistent outputs.
+    4. user_profiler MUST extract labeled fields that prediction_modeler can read.
+    5. Task descriptions drive agent behavior as much as agent prompts.
+       Evolve task descriptions to add clearer instructions and examples.
+
+    RULES YOU MUST FOLLOW:
+    - Keep all four agents: user_profiler, item_analyst, prediction_modeler, rating_critic.
+    - Do NOT remove rating_critic - it is the key novelty of this architecture.
+    - Do NOT change any llm: field values.
+    - You MAY change temperature: values for any agent.
+    - You MAY rewrite role/goal/backstory/description/expected_output fields.
+    - Keep the tasks: sub-key with all four task definitions.
+    - Return the COMPLETE YAML file with EVOLVE-BLOCK-START/END markers preserved.
+    - Use ONLY ASCII characters - no em-dashes, no smart quotes, no special symbols.
+  num_top_programs: 3
+  num_diverse_programs: 2
+  include_artifacts: false
+
+# -- Database -----------------------------------------------------------------
+# CRITICAL: population_size * num_islands should be close to max_iterations
+# 3 islands x 17 programs = 51 slots for 50 iterations = real selection pressure
+database:
+  population_size: 17
+  archive_size: 10
+  num_islands: 3
+  elite_selection_ratio: 0.2
+  exploitation_ratio: 0.7
+  migration_interval: 5
+  migration_rate: 0.4
+  feature_dimensions:
+    - "complexity"
+    - "diversity"
+
+# -- Evaluator ----------------------------------------------------------------
+evaluator:
+  timeout: 900
+  max_retries: 2
+  parallel_evaluations: 1
+  cascade_evaluation: false
